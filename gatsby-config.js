@@ -7,7 +7,14 @@ module.exports = {
     // You can overwrite values here that are used for the SEO component
     // Of course you can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/master/themes/gatsby-theme-cara/gatsby-config.js
-    siteTitleAlt: `Cara - Gatsby Starter Portfolio`,
+    siteTitle: `CARA`,
+    siteHeadline: `CARA - International Center for AI and Robot Autonomy`,
+    siteTitleAlt: `CARA - International Center for AI and Robot Autonomy`,
+    siteUrl: `https://cara.ai`,
+    siteDescription: `CARA - Advancing AI and Robot Autonomy through cutting edge research.`,
+    siteLanguage: `en`,
+    siteImage: `/banner.jpg`,
+    author: "@mjedmonds",
   },
   plugins: [
     {
@@ -47,5 +54,6 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
+    `gatsby-plugin-theme-ui`,
   ],
 }
