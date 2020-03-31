@@ -56,4 +56,5 @@ module.exports = {
     `gatsby-plugin-netlify`,
     `gatsby-plugin-theme-ui`,
   ],
+  pathPrefix: "/cara.ai",
 }
