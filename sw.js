@@ -32,14 +32,14 @@ self.__precacheManifest = [
     "url": "commons-487d38bec414ba5177c2.js"
   },
   {
-    "url": "app-dbb47b84aa0e452f1915.js"
+    "url": "app-d1086ba443e9736250fb.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-e20d661cfc9de7014e2a.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "a13799e5d43781182e4105ad819f0edb"
+    "revision": "eb11cc1c40c46e647bc515639322fb3d"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
@@ -75,7 +75,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/cara.ai/app-dbb47b84aa0e452f1915.js`))) {
+  if (!resources || !(await caches.match(`/cara.ai/app-d1086ba443e9736250fb.js`))) {
     return await fetch(event.request)
   }
 
