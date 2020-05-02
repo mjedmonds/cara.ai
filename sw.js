@@ -26,20 +26,20 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-09605731b4818becdbb4.js"
+    "url": "webpack-runtime-e32c8dabd60a40c35da7.js"
   },
   {
     "url": "commons-487d38bec414ba5177c2.js"
   },
   {
-    "url": "app-d1086ba443e9736250fb.js"
+    "url": "app-ec9d7057eb10f9b2de76.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-e20d661cfc9de7014e2a.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "eb11cc1c40c46e647bc515639322fb3d"
+    "revision": "391888ebc3198c7565095bb453257ba9"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
@@ -75,7 +75,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/cara.ai/app-d1086ba443e9736250fb.js`))) {
+  if (!resources || !(await caches.match(`/cara.ai/app-ec9d7057eb10f9b2de76.js`))) {
     return await fetch(event.request)
   }
 
