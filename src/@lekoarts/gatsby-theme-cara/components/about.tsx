@@ -13,30 +13,42 @@ const About = ({ offset }: { offset: number }) => (
   <div>
     <Divider bg="divider" clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)" speed={0.2} offset={offset} />
     <Content speed={0.4} offset={offset}>
-      <Particles params={
-        {
-          "particles": {
-              "number": {
-                  "value": 50
+      <Particles
+          className="particle-js"
+          height={"65%"}
+          style={{
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            top: "150px",
+            left: "-0%",
+          }}
+          params={{
+            particles: {
+              color: {
+                value: "#2b8a9d"
               },
-              "size": {
-                  "value": 3
+              size: {
+                value: "2"
+              },
+              number: {
+                value: "150"
+              },
+              line_linked: {
+                enable: {
+                  auto: true
+                },
+                distance: "150",
+                color: "#2b8a9d",
+                opacity: "0.3",
+                width: "1"
               }
-          },
-          "interactivity": {
-              "events": {
-                  "onhover": {
-                      "enable": true,
-                      "mode": "repulse"
-                  }
-              }
-            }
-          }
-      } id="particles-js">
+            },
+          }}
+        />
         <Inner>
           <AboutMDX />
         </Inner>
-      </Particles>
     </Content>
   </div>
 )
