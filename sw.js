@@ -26,24 +26,20 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-7cf20e848ebb1e205246.js"
+    "url": "webpack-runtime-b8619b8057f6e52d8c71.js"
   },
   {
     "url": "commons-487d38bec414ba5177c2.js"
   },
   {
-    "url": "app-ec9d7057eb10f9b2de76.js"
+    "url": "app-2e087fcc1619260da599.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-e20d661cfc9de7014e2a.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "b9a6273689eb82303938764decea4b76"
-  },
-  {
-    "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
-    "revision": "c355c8040c47a63bfb3360e4b7cb6553"
+    "revision": "4d6de653e21d3218fb7694af38ab8e02"
   },
   {
     "url": "manifest.json",
@@ -51,7 +47,7 @@ self.__precacheManifest = [
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "07219f93635aabf02454af512f2d3c50"
+    "revision": "bce740dcadae25e76cfc21ca0b04e56a"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
@@ -70,12 +66,12 @@ const { NavigationRoute } = workbox.routing
 
 const navigationRoute = new NavigationRoute(async ({ event }) => {
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^/cara.ai`), ``)
+  pathname = pathname.replace(new RegExp(`^`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/cara.ai/app-ec9d7057eb10f9b2de76.js`))) {
+  if (!resources || !(await caches.match(`/app-2e087fcc1619260da599.js`))) {
     return await fetch(event.request)
   }
 
@@ -88,7 +84,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/cara.ai/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
   return await caches.match(offlineShell)
 })
 
