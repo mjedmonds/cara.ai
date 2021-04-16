@@ -44,7 +44,7 @@ const Hero = ({ offset }: { offset: number }) => (
             },
           }}
         />
-      <Inner>
+      <Inner sx={{textAlign: `center` }}>
         <Title />
       </Inner>
       <Inner sx={{textAlign: `center` }}>
